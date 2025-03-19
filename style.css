@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.addTask {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #66a6ff;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #66a6ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #5588dd;
+    transform: scale(1.05);
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 5px solid #66a6ff;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-list li:hover {
+    background: #ddd;
+}
+
+.task-list li.checked {
+    color: #ff7675;
+    border-left: 5px solid #ff7675;
+    position: relative;
+    padding-left: 30px;
+}
+
+.task-list li.checked span {
+    text-decoration: line-through;
+}
+
+.task-list li.checked::before {
+content: '✔';
+position: absolute;
+left: 10px;
+color: #008000;
+font-weight: bold;
+font-size: 1.2em;
+}
+
+.delete-btn {
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
